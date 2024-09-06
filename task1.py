@@ -1,5 +1,4 @@
 from datetime import datetime, date
-import sys
 
 
 def get_days_from_today(date_str):
@@ -7,7 +6,9 @@ def get_days_from_today(date_str):
     try:
         target_date = datetime.strptime(date_str, "%Y-%m-%d").date()
     except Exception as e:
-        sys.exit(e)
+        print(e)
+        return None
+        
     # Отримуємо поточну дату
     today = date.today()
     # Обчислюємо різницю між датами
