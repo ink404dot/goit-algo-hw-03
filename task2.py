@@ -3,7 +3,8 @@ import random
 
 def get_numbers_ticket(min_val, max_val, quantity):
     # Перевіряємо обмеження параметрів
-    if min_val < 1 or max_val > 1000 or quantity > min_val or quantity < max_val:
+    if min_val < 1 or max_val > 1000 \
+            or min_val > max_val or quantity < 1:
         return []
 
     # Генеруємо унікальний набір чисел
